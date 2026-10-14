@@ -1,3 +1,20 @@
+# FoldEngine — releases
+
+*English first; Italian below.*
+
+This repository holds only the FoldEngine releases for macOS: the app signed with Developer ID and notarized by Apple, and the signed
+manifest the installed app reads to check for updates. The source code lives in a private repository.
+
+- **Publisher**: Alessandro Pedretti (Developer ID, team J9BKAB29A5). App identifier: `com.alessandropedretti.foldengine`.
+- **Verifying a download**: every release lists the SHA-256 of its archive; Gatekeeper must report "Notarized Developer ID".
+- **Updates**: the app downloads `manifesto.json` from the latest release and accepts it only if its ECDSA P-256 signature matches the
+  public key compiled into the app, the identifier matches and the manifest has not expired (45 days at most). The manifest is
+  re-signed every 30 days even without new versions.
+
+Copyright 2026 Alessandro Pedretti. All rights reserved; no licence is granted beyond using the app distributed here.
+
+---
+
 # FoldEngine — rilasci
 
 Qui stanno solo i rilasci di FoldEngine per macOS: l'app firmata con Developer ID e notarizzata da Apple, e il manifesto firmato da
